@@ -23,21 +23,18 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- add your plugins here
-    {"catppuccin/nvim", as = "catppuccin"}
+    { "catppuccin/nvim", as = "catppuccin" },
   },
-  -- Configure any other settings here. See the documentation for more details.
-  
   install = { colorscheme = { "catppuccin" } },
-
-  checker = { enabled = true },
   defaults = {
-    lazy = true,
     config = function()
-      vim.cmd([[colorscheme catppuccin-frappe]])
+      vim.cmd([[colorscheme catppuccin]])
     end,
   },
 })
+
+vim.cmd.colorscheme "catppuccin-mocha"
+
+
