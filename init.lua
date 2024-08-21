@@ -25,16 +25,15 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   spec = {
-    { "catppuccin/nvim", as = "catppuccin" },
+    -- add your plugins here
   },
-  install = { colorscheme = { "catppuccin" } },
-  defaults = {
-    config = function()
-      vim.cmd([[colorscheme catppuccin]])
-    end,
-  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { colorscheme = { "habamax" } },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
 })
 
-vim.cmd.colorscheme "catppuccin-mocha"
+ 
 
 
